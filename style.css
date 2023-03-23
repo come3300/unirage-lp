@@ -1,0 +1,435 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;600&display=swap');
+
+/*
+Theme Name:unirage-lp
+author :Daisuke Yonekura
+ver :1.0.0
+*/
+
+
+
+
+/*====================
+スマホを基本設計にする
+ - 〜479px：スマートフォン縦
+ - 480px〜599px：スマートフォン横
+ - 600px〜959px：タブレット
+ - 960px〜1279px：小型PC
+ - 1280px〜：大型PC
+====================*/
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #000060;
+  font-family: "Sawarabi Gothic";
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+h2{
+   font-size: 1.5rem !important;
+}
+
+h3{
+  font-size: 1.2rem !important;
+}
+
+img {
+  max-width: 100%; /* スマホサイズでも画像が縮小される。 */
+}
+
+li {
+  list-style: none;
+  font-size: 1.2rem;
+}
+
+.wrapper{
+  padding: 5% 0;
+}
+
+.font-white{
+  color: white;
+}
+
+.consul-btn{
+  display: grid;
+  width: 75%;
+  margin: 0 auto;
+  height: 60px;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  align-items: center;
+  border-radius: 25px;
+}
+
+
+.white-boxes{
+  display: flex;
+}
+
+.white-boxes a{
+  background-color: white;
+  display: block;
+  width: 200px;
+  height: 40px;
+  margin: 5% 2%;
+  border-radius: 10px;
+}
+
+
+.blk-wrapper{
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  display: grid;
+  justify-items: center;
+  align-items: end;
+  margin: 3% 0%;
+}
+
+.blk{
+ box-shadow: rgb(0 0 0 / 16%) 0px 10px 36px 0px, rgb(0 0 0 / 6%) 0px 0px 0px 1px;
+  padding: 5%;
+  width: 93%;
+  padding: 5%;
+  height: 265px;
+  border-radius: 10px;
+  margin: 0%;
+  position: relative;
+  text-align: center;
+}
+
+
+.blk img{
+width: 70%;
+max-width: 200px;
+margin: 0 auto;
+
+}
+
+.font-68{
+font-size: 2.5rem;
+}
+
+.font-30{
+  font-size: 1rem;
+}
+
+.font-40{
+  font-size: 1.2rem;
+}
+
+.font-45{
+  font-size: 1.4rem;
+}
+
+.width-50{
+width: 50%;
+}
+
+
+.orenge-btn{
+  background-color: #FF5555;
+}
+
+.navy-btn{
+  background-color: #000060;
+}
+
+.site-title a img{
+  width: 70%;
+}
+
+.red-line{
+  width: 99%;
+  border: 2px solid #FF5555;
+}
+
+.navy-line{
+   width: 100%;
+  border: 1.5px solid #000060;
+}
+
+
+/*----------------------------------------------
+ヘッダー
+------------------------------------------------*/
+#header {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 170px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+#header ul {
+  display: flex;
+  padding: 10px 0;
+  align-items: center;
+}
+
+#header li {
+  font-size: 1.1rem;
+  margin-left: 30px;
+  white-space: nowrap;
+}
+
+header li a {
+  color: #000060;
+  transition: all 0.3s;
+  white-space:nowrap;
+}
+
+#header li a:hover {
+  opacity: 0.5;
+}
+
+.header-btn{
+  border-radius: 26px;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-btn a{
+  color: white;
+}
+
+.header-btn a span{
+    font-size: 0.6rem;
+}
+
+
+
+
+
+/*-------------------------------------------
+mv
+-------------------------------------------*/
+#mv {
+  margin-bottom: 80px;
+  background: linear-gradient(to right, #FF5555, #FF9B9B);
+  height: 600px;
+  position: relative;
+  width: 100%;
+}
+
+.mv-wrapper{
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
+  display: grid;
+  justify-items: center;
+  align-items: end;
+}
+
+.mv-container{
+ 
+}
+
+
+.mv-container h2{
+  text-align: center;
+  font-size: 4rem !important;
+  margin: 3% 0;
+}
+
+.mv-container h3{
+  text-align: center;
+  font-size: 2rem !important;
+  line-height: 1.6;
+}
+
+.mv-container img{
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+ 
+}
+
+/*-------------------------------------------
+About
+-------------------------------------------*/
+#about{
+  text-align: center;
+}
+
+.about-wrapper{
+  
+}
+
+.about-title{
+  font-size: 2.5rem !important;
+}
+
+.about-blk p{
+  line-height: 1.5;
+}
+
+
+/*-------------------------------------------
+service
+-------------------------------------------*/
+#service{
+  background-color: #ff555526;
+}
+
+.service-title{
+  text-align: center;
+}
+
+.blk.service-blk{
+  height: 100%;
+  border: 2px solid #FF5555 ;
+  padding: 5% 0;
+  background-color: white;
+}
+
+.blk.service-blk img{
+    width: 30%;
+    max-width: 200px;
+    margin: 9% auto;
+  }
+/*-------------------------------------------
+reason
+-------------------------------------------*/
+.reason-blk{
+  height: 100%;
+}
+/*-------------------------------------------
+flow
+-------------------------------------------*/
+#flow{
+  background-color: #ff555526;
+}
+
+.flow-title{
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.flow-blk-top{
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.flow-blk-bottom{
+
+}
+
+.blk.flow-blk{
+  background-color: white;
+}
+
+.blk.flow-blk img{
+  width: 30%;
+  max-width: 200px;
+  margin: 9% auto;
+}
+/*-------------------------------------------
+question
+-------------------------------------------*/
+.question-title{
+  font-size: 2.5rem !important;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.question-blks{
+  margin: 10%;
+}
+
+.question-blk{
+  margin: 10% 0;
+}
+
+.a-text{
+  margin-top: 3%;
+  line-height: 1.8;
+}
+
+/*-------------------------------------------
+contact
+-------------------------------------------*/
+#contact{
+  background-color: #ff555526;
+  
+}
+
+.contact-wrapper{
+  padding: 6% 0;
+}
+.contact-input{
+    width: 100%;
+    height: 50px;
+    background: white;
+
+}
+
+.contact-blks{
+  margin: 5% 20%;
+}
+
+.contact-text-blk{
+  display: flex;
+  align-items: center;
+  margin: 2% 0;
+}
+
+.must-tub{
+    background-color: #FF5555;
+    color: white;
+    padding: 1% 1%;
+    border-radius: 5px;
+    margin-left: 1%;
+}
+
+.contact-title{
+  font-size: 2.5rem !important;
+  text-align: center;
+}
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+#footer{
+  position: relative;
+  padding: 5% 0;
+}
+
+
+.footer-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-wrapper nav ul {
+  position: absolute;
+  right: 8%;
+  display: flex;
+  
+}
+
+.footer-wrapper nav ul li{
+  margin: 2%;
+  white-space: nowrap;
+  margin: 0 7%;
+  white-space: nowrap;
+}
+
+
+
