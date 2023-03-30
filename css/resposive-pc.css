@@ -1,6 +1,21 @@
-@media screen and (min-width:1300px) and ( max-width:1399px){
+@media screen and (min-width:1300px) {
 
 
+
+
+
+ 
+
+}
+
+@media screen and (min-width:1600px) {
+
+  /*----------------------------------------------
+MV
+------------------------------------------------*/
+.mv-container img{
+    right: 15%;
+}
 
 
  

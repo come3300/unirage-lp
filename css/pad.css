@@ -1,0 +1,303 @@
+@media screen and (min-width:600px) and (max-width: 1024px) {
+    .sp{
+        display: none;
+      }
+      
+      .pc{
+        display: block;
+      }
+
+      .none{
+        display: none;
+      }
+
+      .pad-dpr{
+        display: block;
+      }
+
+      .consul-btn {
+        font-size: 1.4rem;
+    }
+
+    .font-40 {
+        font-size: 1rem;
+    }
+
+    .font-68 {
+        font-size: 2rem;
+    }
+
+    .pad-none{
+        display: none;
+    }
+
+/* HM */
+
+body.fixed {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    }
+
+@keyframes bugfix {
+    from {
+      padding: 0;
+    }
+    to {
+      padding: 0;
+    }
+  }
+  @-webkit-keyframes bugfix {
+    from {
+      padding: 0;
+    }
+    to {
+      padding: 0;
+    }
+  }
+  #overlay-button {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    padding: 26px 11px;
+    z-index: 5;
+    cursor: pointer;
+    user-select: none;
+  }
+  #overlay-button span {
+    height: 4px;
+    width: 35px;
+    border-radius: 2px;
+    background-color: black;
+    position: relative;
+    display: block;
+    transition: all .2s ease-in-out;
+  }
+  #overlay-button span:before {
+    top: -10px;
+    visibility: visible;
+  }
+  #overlay-button span:after {
+    top: 10px;
+  }
+  #overlay-button span:before, #overlay-button span:after {
+    height: 4px;
+    width: 35px;
+    border-radius: 2px;
+    background-color: black;
+    position: absolute;
+    content: "";
+    transition: all .2s ease-in-out;
+  }
+  #overlay-button:hover span, #overlay-button:hover span:before, #overlay-button:hover span:after {
+    background-color: black;
+  }
+  
+  input[type=checkbox] {
+    display: none; 
+    
+  }
+  
+  input[type=checkbox]:checked ~ #overlay {
+    visibility: visible; 
+  }
+  
+  
+  input[type=checkbox]:checked ~ #overlay-button:hover span, input[type=checkbox]:checked ~ #overlay-button span {
+    background: transparent;
+    
+    
+  }
+  input[type=checkbox]:checked ~ #overlay-button span:before {
+    transform: rotate(45deg) translate(7px, 7px);
+  
+  }
+  input[type=checkbox]:checked ~ #overlay-button span:after {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  #header{
+    position: relative;
+  }
+
+  .header-btn-sp.orenge-btn{
+    margin-top: 8%;
+  }
+  
+  #overlay {
+    height: 100vh;
+    width: 100vw;
+    background: white;
+    z-index: 2;
+    right: 0;
+    top: 100px;
+    visibility: hidden;
+    position: fixed;
+  }
+  #overlay.active {
+  
+  }
+  #overlay ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    /* height: 100vh; */
+    padding-left: 0;
+    list-style-type: none;
+  }
+  #overlay ul li {
+    padding: 1em;
+  }
+  #overlay ul li a {
+    color: #000060;
+    text-decoration: none;
+    font-size: 1.3rem;
+  }
+  .header-btn-sp{
+    border-radius: 26px;
+    width: 33%;
+    height: 55px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+  }
+  
+  .header-btn-sp a{
+      color: white !important;
+      font-size: 1rem !important;
+  }
+  
+  .header-btn-sp a span{
+    color: white !important;
+    font-size: 0.5rem !important;
+  }
+
+/*-------------------------------------------
+mv
+-------------------------------------------*/
+#mv {
+    height: 400px;
+}
+
+  .mv-container img {
+    height: 91%;
+    width: 44%;
+    object-fit: contain;
+}
+
+.mv-container h2 {
+    font-size: 3rem !important;
+}
+
+.mv-container h3 {
+    font-size: 1.3rem !important;
+}
+
+.white-boxes a {
+    width: 133px;
+    height: 40px;
+}
+
+.mv-container-left {
+    margin: 13% 15%;
+}
+
+/*-------------------------------------------
+about
+-------------------------------------------*/
+.about-blk {
+    height: 250px;
+}
+
+
+.about-title {
+    font-size: 2rem !important;
+}
+
+/*-------------------------------------------
+service
+-------------------------------------------*/
+
+
+.service-blk-title {
+    font-size: 1.3rem;
+}
+
+.service-note {
+    margin: 5% 6%;
+}
+
+.blk.service-blk {
+    height: 389px;
+    width: 29%;
+    padding: 1% 1%;
+}
+/*-------------------------------------------
+reason
+-------------------------------------------*/
+.blk.flow-blk p {
+    font-size: 0.9rem !important;
+}
+.reason-blk {
+
+    width: 29%;
+   
+}
+
+/*-------------------------------------------
+flow
+-------------------------------------------*/
+
+.flow-blk-bottom {
+    display: flex !important;
+}
+
+.blk.flow-blk {
+    background-color: white;
+    height: 200px;
+    margin: 0% 1%;
+    padding: 5% 4%;
+}
+
+.blk.flow-blk img {
+    width: 100px;
+    max-width: 200px;
+    object-fit: contain;
+    height: 90px;
+    max-width: 100px;
+    object-fit: contain;
+}
+.blk.flow-blk p{
+   font-size: 1rem;
+}
+
+/*-------------------------------------------
+question
+-------------------------------------------*/
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+
+.inc {
+    margin-left: 5%;
+    font-size: 1rem;
+}
+
+.footer-wrapper nav ul {
+    right: 11%;
+    top: 43%;
+}
+
+.footer-wrapper nav ul li {
+    font-size: 1rem;
+}
+
+}

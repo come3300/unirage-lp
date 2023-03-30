@@ -1,80 +1,438 @@
 /*----------------------------------------------
 SP
 ------------------------------------------------*/
-/* pcファースト　大きいサイズから小さいサイズへ */
+/* pcファースト 大きいサイズから小さいサイズへ */
 /* 600pxより小さいときのcss適用 */
 
-@media screen and (max-width: 600px) {
-  .wrapper {
-    margin-bottom: 70px;
+@media screen and (max-width: 599px) {
+
+  /*----------------------------------------------
+global 
+------------------------------------------------*/
+
+.sp{
+  display: none;
+}
+
+.pc{
+  display: block;
+}
+
+h3{
+  font-size: 0.9rem !important;
+}
+
+
+::placeholder{
+ font-size: 1rem !important;
+}
+
+.white-boxes a {
+  background-color: white;
+  display: block;
+  width: 120px;
+  height: 40px;
+  margin: 5% 2%;
+  border-radius: 10px;
+}
+
+.consul-btn {
+  font-size: 1.7rem;
+}
+
+
+.font-30 {
+  font-size: 0.5rem;
+}
+
+.font-40 {
+  font-size: 0.9rem;
+}
+
+.font-45 {
+  font-size: 1.1rem;
+}
+
+.font-68 {
+  font-size: 1.8rem;
+}
+
+.emphasis{
+  font-size: 2rem;
+}
+
+/*----------------------------------------------
+ヘッダー
+------------------------------------------------*/
+
+.site-title a img {
+  width: 40%;
+}
+
+#header {
+  height: 100px;
+  position: relative;
+}
+
+/* HM */
+
+body.fixed {
+  width: 100%;
+  height: 100%;
+  position: fixed;
   }
 
-  .site-title {
-    margin-top: 20px;
+@keyframes bugfix {
+  from {
+    padding: 0;
   }
+  to {
+    padding: 0;
+  }
+}
+@-webkit-keyframes bugfix {
+  from {
+    padding: 0;
+  }
+  to {
+    padding: 0;
+  }
+}
+#overlay-button {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  padding: 26px 11px;
+  z-index: 5;
+  cursor: pointer;
+  user-select: none;
+}
+#overlay-button span {
+  height: 4px;
+  width: 35px;
+  border-radius: 2px;
+  background-color: black;
+  position: relative;
+  display: block;
+  transition: all .2s ease-in-out;
+}
+#overlay-button span:before {
+  top: -10px;
+  visibility: visible;
+}
+#overlay-button span:after {
+  top: 10px;
+}
+#overlay-button span:before, #overlay-button span:after {
+  height: 4px;
+  width: 35px;
+  border-radius: 2px;
+  background-color: black;
+  position: absolute;
+  content: "";
+  transition: all .2s ease-in-out;
+}
+#overlay-button:hover span, #overlay-button:hover span:before, #overlay-button:hover span:after {
+  background-color: black;
+}
 
-  .sec-title {
-    margin-bottom: 40px;
-  }
+input[type=checkbox] {
+  display: none; 
+}
 
-  /* ヘッダー */
-  #header {
-    max-width: 100%;
-    height: auto;
-    flex-direction: column;
-    margin-top: 20px;
-    line-height: 40px;
-  }
+input[type=checkbox]:checked ~ #overlay {
+  visibility: visible; 
+}
 
-  #header li {
-    font-size: 0.8rem;
-    margin-left: 20px;
-  }
+input[type=checkbox]:checked ~ .site-logo{
+  display: none;
+}
 
-  #header li:first-child {
-    margin-left: 0;
-  }
 
-  #header li img.icon {
-    width: 20px;
-    margin-top: 15px;
-  }
+input[type=checkbox]:checked ~ #overlay-button:hover span, input[type=checkbox]:checked ~ #overlay-button span {
+  background: transparent;  
+}
+input[type=checkbox]:checked ~ #overlay-button span:before {
+  transform: rotate(45deg) translate(7px, 7px);
 
-  /* works */
-  #works ul {
-    flex-direction: column;
-  }
+}
+input[type=checkbox]:checked ~ #overlay-button span:after {
+  transform: rotate(-45deg) translate(7px, -7px);
 
-  #works ul li {
-    width: 100%;
-  }
 
-  /* news */
-  #news dl {
-    flex-direction: column;
-  }
+}
 
-  #news dt {
-    width: 100%;
-    border-bottom: none;
-    padding-bottom: 0;
-  }
+#overlay {
+  height: 100vh;
+  width: 100vw;
+  background: white;
+  z-index: 2;
+  right: 0;
+  top: 100px;
+  visibility: hidden;
+  position: fixed;
+}
+#overlay.active {
 
-  #news dd {
-    width: 100%;
-    padding-top: 0;
-  }
+}
+#overlay ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 2%;
+  padding-left: 0;
+  list-style-type: none;
+}
+#overlay ul li {
+  padding: 1em;
+}
+#overlay ul li a {
+  color: #000060;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
 
-  /* contact */
-  #contact dl {
-    flex-direction: column;
-  }
+.header-btn-sp{
+  border-radius: 26px;
+    width: 60%;
+    height: 55px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin: 3%;
+}
 
-  #contact dt {
-    width: 100%;
-    margin-bottom: 5px;
-  }
-  #contact dd {
-    width: 100%;
-  }
+.header-btn-sp a{
+    color: white !important;
+    font-size: 1rem !important;
+}
+
+.header-btn-sp a span{
+  color: white !important;
+  font-size: 0.5rem !important;
+}
+
+.header-btn-sp.orenge-btn{
+  margin-top: 17%;
+}
+/*----------------------------------------------
+MV
+------------------------------------------------*/
+#mv {
+  height: 750px;
+  margin-bottom: 0;
+}
+
+.mv-wrapper {
+  grid-template-columns: 1fr;
+  align-content: space-between;
+}
+
+.mv-container-left {
+  margin-top: 15%;
+}
+
+.mv-container h2 {
+  text-align: center;
+  font-size: 2.5rem !important;
+  margin: 3% 0;
+}
+
+.mv-container img {
+  height: 400px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+
+.mv-container h3 {
+  font-size: 1.2rem !important;
+}
+
+.consul-btn {
+  width: 90%;
+  height: 50px;
+}
+
+#page-top {
+  bottom: 115px;
+}
+
+/*----------------------------------------------
+under-contact-tab
+------------------------------------------------*/
+.under-contact-tab{
+  width: 100%;
+  height: 100px;
+  background-color: #00000047;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.under-contact-wrapper{
+  
+}
+
+.under-consul-btn {
+  margin: 7% auto;
+}
+
+
+
+/*-------------------------------------------
+About
+-------------------------------------------*/
+.about-title {
+  font-size: 1.4rem !important;
+}
+
+.blk-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-blk{
+  margin: 5%;
+  width: 70%;
+  padding: 1%;
+  height: 250px;
+}
+/*-------------------------------------------
+service
+-------------------------------------------*/
+
+.blk.service-blk {
+  width: 66%;
+  margin: 3%;
+  height: 385px;
+}
+
+
+.reason-blk {
+  margin: 3%;
+  width: 60%;
+}
+
+.service-blk-title {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  line-height: 1.3;
+  margin: 4% 0;
+}
+
+.service-blk-text{
+  font-size: 1rem;
+  letter-spacing: 4px;
+   margin: 4% 1%;
+}
+
+.service-note {
+  display: flex;
+  justify-content: center;
+  font-size: 0.8rem !important;
+  margin: 3% 8%;
+  line-height: 1.6;
+  margin-bottom: 8%;
+}
+
+/*-------------------------------------------
+reason
+-------------------------------------------*/
+
+/*-------------------------------------------
+flow
+-------------------------------------------*/
+
+.blk-wrapper.flow-blk-top{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.blk.flow-blk {
+  background-color: white;
+  height: 200px;
+  margin: 5%;
+}
+.blk-wrapper.flow-blk-bottom{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+}
+
+.blk.flow-blk.pc{
+  width: 49%;
+  margin: 0 auto;
+}
+
+.blk.flow-blk p{
+  font-size: 0.9rem;
+}
+
+.blk.flow-blk img {
+  width: 60%;
+  max-width: 70px;
+  margin: 16% auto;
+  height: 90px;
+  max-width: 200px;
+}
+/*-------------------------------------------
+question
+-------------------------------------------*/
+
+.question-blks {
+  margin: 10% 5%;
+}
+
+.a-text {
+  font-size: 1.3rem;
+}
+
+.question-title {
+  font-size: 2rem !important;
+}
+
+/*-------------------------------------------
+contact
+-------------------------------------------*/
+
+.contact-blks {
+  margin: 5% 6%;
+}
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+
+#footer{
+  padding: 13% 0;
+}
+
+.inc{
+  font-size: 1rem;
+  margin-top: 12%;
+}
+
+.footer-wrapper nav ul {
+  position: absolute;
+  right: 14%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-wrapper nav ul li {
+  font-size: 1rem;
+}
+
+
 }
